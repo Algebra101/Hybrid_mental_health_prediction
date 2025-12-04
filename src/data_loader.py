@@ -1,49 +1,72 @@
+# Pseudo-code for Hybrid Synthesis
 import pandas as pd
-import numpy as np
+import random
+from nltk.corpus import wordnet
 
-def load_and_synthesize_data(student_path, reddit_path):
-    """
-    Merges structured student data with unstructured Reddit text 
-    based on implied risk labels to create a Hybrid Dataset.
-    """
-    # 1. Load Raw Data
-    df_student = pd.read_csv(student_path)
-    df_reddit = pd.read_csv(reddit_path)
+# 1. Load Data
+students = pd.read_csv('data/raw/Student_Mental_Health.csv')
+reddit = pd.read_csv('data/raw/Reddit_Mental_Health.csv')
 
-    # 2. Standardize Labels (Example Mapping)
-    # Assume Student dataset has 'Depression' (Yes/No) and Reddit has 'label' (0=Stress, 1=Depression)
-    # We need them to match.
-    
-    # Filter Reddit for relevant classes (e.g., keep Depression and Anxiety posts)
-    reddit_depressed = df_reddit[df_reddit['label'] == 1]['text'].values
-    reddit_stress = df_reddit[df_reddit['label'] == 0]['text'].values
-    
-    # 3. Synthetic Merge Logic
-    hybrid_data =
-    
-    for index, row in df_student.iterrows():
-        # Logic: If student has depression, assign a "Depression" post. 
-        # If not, assign a "Stress" or "Normal" post.
-        
-        if row == 'Yes':
-            text_sample = np.random.choice(reddit_depressed)
-            risk_level = 'High'
-        else:
-            text_sample = np.random.choice(reddit_stress)
-            risk_level = 'Low' # or 'Moderate' based on other cols
-            
-        # Combine into one dictionary
-        hybrid_row = row.to_dict()
-        hybrid_row['journal_text'] = text_sample  # The Unstructured Feature
-        hybrid_row = risk_level     # The Target
-        
-        hybrid_data.append(hybrid_row)
-        
-    df_hybrid = pd.DataFrame(hybrid_data)
-    return df_hybrid
+# 2. Pre-Merge Cleaning
+reddit = reddit.dropna(subset=['post_text']) # Remove 350 nulls
 
-if __name__ == "__main__":
-    # Test the function
-    df = load_and_synthesize_data('../data/raw/student.csv', '../data/raw/reddit.csv')
-    df.to_csv('../data/processed/hybrid_dataset.csv', index=False)
-    print("Hybrid Data Synthesized Successfully!")
+# 3. Define Risk Mapping Function
+def map_student_risk(row):
+    if row == 'Yes' and row['Anxiety'] == 'Yes':
+        return 3 # High Risk
+    elif row == 'Yes':
+        return 2 # Moderate
+    elif row['Anxiety'] == 'Yes':
+        return 1 # Low
+    else:
+        return 0 # Healthy
+
+def map_reddit_risk(row):
+    if row['subreddit'] in:
+        return 3
+    elif row['subreddit'] == 'anxiety':
+        return 2
+    elif row['subreddit'] == 'stress':
+        return 1
+    else:
+        return 0
+
+# 4. Apply Mappings
+students['risk_label'] = students.apply(map_student_risk, axis=1)
+reddit['risk_label'] = reddit.apply(map_reddit_risk, axis=1)
+
+# 5. Create Text Buckets
+text_buckets = {
+    0: reddit[reddit['risk_label'] == 0]['post_text'].tolist(),
+    1: reddit[reddit['risk_label'] == 1]['post_text'].tolist(),
+    2: reddit[reddit['risk_label'] == 2]['post_text'].tolist(),
+    3: reddit[reddit['risk_label'] == 3]['post_text'].tolist()
+}
+
+# 6. Synonym Augmentation Function
+def augment_text(text):
+    words = text.split()
+    # Randomly replace 1 word with a synonym
+    idx = random.randint(0, len(words)-1)
+    # (Implementation of synonym lookup via WordNet omitted for brevity)
+    return " ".join(words)
+
+# 7. The Synthesis Loop
+hybrid_data =
+for index, student in students.iterrows():
+    risk = student['risk_label']
+    
+    # Stochastic Selection
+    # Pick a random text from the matching bucket
+    base_text = random.choice(text_buckets[risk])
+    
+    # Augmentation
+    final_text = augment_text(base_text)
+    
+    # Create merged record
+    new_record = student.to_dict()
+    new_record['journal_text'] = final_text
+    hybrid_data.append(new_record)
+
+# 8. Save
+pd.DataFrame(hybrid_data).to_csv('data/processed/hybrid_final.csv')
