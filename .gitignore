@@ -1,0 +1,8 @@
+# Ignore the raw data files
+data/raw/
+venv/
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
