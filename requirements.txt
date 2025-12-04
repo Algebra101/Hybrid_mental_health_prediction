@@ -1,0 +1,37 @@
+# Data processing
+numpy
+pandas
+scikit-learn
+
+# Visualization
+matplotlib
+seaborn
+wordcloud
+
+# NLP
+nltk
+spacy
+transformers
+tokenizers
+datasets
+
+# Deep learning
+torch
+torchvision
+torchaudio
+tensorflow==2.16.1
+
+# Model tracking & experiments
+mlflow
+
+# Web app
+streamlit
+
+# Utilities
+tqdm
+python-dotenv
+joblib
+
+# Jupyter Notebook support
+jupyter
+ipykernel
