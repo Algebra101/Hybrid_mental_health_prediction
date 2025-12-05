@@ -74,8 +74,8 @@ The project follows an **Early-Fusion design** that merges all modalities at the
 ## ✨ Key Features
 
 - **Unified Feature Space:** Converts structured survey metrics into coherent text narratives.
-- **Intelligent Null Salvage:** Merges 350 Reddit `[deleted]` posts using title-body reconstruction.
-- **Synthetic Text Augmentation:** Uses 27K student narratives to pre-train the model for 6K Reddit samples.
+- **Intelligent Null Salvage:** Merges 365 Reddit `[deleted]` posts using title-body reconstruction.
+- **Synthetic Text Augmentation:** Uses 27K student narratives to pre-train the model for 51K Reddit samples.
 - **Dual-Mode Web App:**
 
   - **Assessment Mode:** Numeric input auto-serialized to text.
