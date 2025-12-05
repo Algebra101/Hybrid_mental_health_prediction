@@ -93,7 +93,7 @@ mental_health_hybrid/
 ├── data/
 │   ├── raw/                  # Source CSV files
 │   ├── processed/            # Cleaned hybrid datasets
-|   |── augmented/   # optional LLM-generated text
+|   |── augmented/            # optional LLM-generated text
 │   └── resources.json        # Coping strategies & helpline database
 │
 ├── notebooks/
@@ -259,4 +259,5 @@ If you or someone you know is in distress, please reach out to a licensed profes
 **Academic Year:** 2025
 
 ---
+
 
