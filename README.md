@@ -108,7 +108,7 @@ mental_health_hybrid/
 │   ├── recommender.py        # Maps predicted risk → coping strategies
 |   |── text_converter.py     # Converts the student dataset to text format
 │   └── model.py              # RoBERTa architecture, training & metrics
-│   
+│
 ├── app/                      # Streamlit Web Application
 │   ├── main.py               # UI entry point
 │   └── utils.py              # Helper functions (charts, formatting)
@@ -148,11 +148,11 @@ streamlit run app/main.py
 
 ### 1. Synthetic Hybrid Strategy
 
-| Dataset                           | Source                                                                                              | Type         | Records | Description                                 |
-| --------------------------------- | --------------------------------------------------------------------------------------------------- | ------------ | ------- | ------------------------------------------- |
-| **Student Mental Health Dataset** | [Kaggle – Student Mental Health](https://www.kaggle.com/datasets/ahmadmideva/student-mental-health) | Structured   | ~27,901 | CGPA, Sleep, Study Hours, Academic Pressure |
-| **Reddit Mental Health Posts**    | [Kaggle – Suicide Watch Subreddit](https://www.kaggle.com/datasets/nikhileswarkomati/suicide-watch) | Unstructured | ~5,957  | Reddit posts about mental health & distress |
-| **Hybrid Narratives (Generated)** | Internal                                                                                            | Text         | ~33,000 | Unified text corpus combining both datasets |
+| Dataset                           | Source                                                                                                                                 | Type         | Records | Description                                 |
+| --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- | ------------ | ------- | ------------------------------------------- |
+| **Student Mental Health Dataset** | [Kaggle – Student Mental Health](https://www.kaggle.com/datasets/ahmadmideva/student-mental-health)                                    | Structured   | ~27,901 | CGPA, Sleep, Study Hours, Academic Pressure |
+| **Reddit Mental Health Posts**    | [Kaggle – Sentiment Analysis for Mental Health](https://www.kaggle.com/datasets/suchintikasarkar/sentiment-analysis-for-mental-health) | Unstructured | ~51074  | Reddit posts about mental health & distress |
+| **Hybrid Narratives (Generated)** | Internal                                                                                                                               | Text         | ~79,000 | Unified text corpus combining both datasets |
 
 **Data Fusion Approach:**
 
@@ -162,7 +162,7 @@ streamlit run app/main.py
 
 **Null Handling:**
 
-- 350 Reddit posts reconstructed via title-body merging.
+- 365 Reddit posts reconstructed via title-body merging.
 - `[deleted]` preserved as a sentiment token.
 
 ### 2. Recommendation Engine
@@ -259,5 +259,3 @@ If you or someone you know is in distress, please reach out to a licensed profes
 **Academic Year:** 2025
 
 ---
-
-
