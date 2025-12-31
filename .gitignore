@@ -6,3 +6,5 @@ Thumbs.db
 __pycache__/
 *.pyc
 data/processed/
+*.pth
+models/*.pth
