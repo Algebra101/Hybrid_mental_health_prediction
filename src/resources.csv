@@ -1,0 +1,52 @@
+Resource_ID,Type,Description,Tags,Risk_Level_Allowed,Link
+C001,Hotline,"Immediate 24/7 crisis support for severe distress, suicidal ideation, and self-harm prevention.",suicide crisis emergency,1,Call 988
+C002,Contact,"Campus Emergency Services for immediate physical safety threats.",emergency campus safety,1,Call Campus Security
+C003,Text,"Crisis Text Line: Text HOME to 741741 for free, 24/7 crisis counseling.",text crisis anxiety,1,Text 741741
+C004,Hotline,"The Trevor Project: Crisis intervention and suicide prevention for LGBTQ youth.",lgbtq crisis support,1,thetrevorproject.org
+C005,Service,"Local Hospital Emergency Room (ER) for immediate psychiatric evaluation.",hospital medical emergency,1,Google Maps: Nearest ER
+A001,Video,"A 5-minute deep breathing exercise to reduce physiological anxiety and improve sleep latency.",anxiety sleep breathing,0,youtube.com/breathing
+A002,Exercise,"5-4-3-2-1 Grounding Technique to stop a panic attack in its tracks.",panic grounding focus,0,healthline.com/grounding
+A003,Audio,"Progressive Muscle Relaxation (PMR) guide to release physical tension caused by stress.",tension physical relaxation,0,spotify.com/pmr
+A004,Article,"How to manage 'Sunday Scaries' and anticipatory anxiety before the week starts.",anticipation worry weekend,0,psychcentral.com/sunday-scaries
+A005,App,"Dare: An app specifically designed to help people challenge and overcome panic attacks.",app panic dare,0,dareapp.com
+A006,Video,"Box Breathing technique used by Navy SEALs to regain control under high pressure.",stress control focus,0,youtube.com/box-breathing
+A007,Article,"The physiological difference between anxiety and excitement: Re-framing your nerves.",mindset nerves reframing,0,theatlantic.com/anxiety-excitement
+A008,Tool,"Worry Time: A CBT technique to schedule worry for a specific time of day instead of all day.",cbt worry scheduling,0,tools.com/worry-time
+D001,Video,"Behavioral Activation: How to get out of bed when you feel zero motivation or energy.",depression motivation lethargy,0,youtube.com/behavioral-activation
+D002,App,"Gratitude Journaling app to shift focus from negative automatic thoughts.",mood gratitude journaling,0,appstore.com/gratitude
+D003,Article,"Understanding the difference between sadness and clinical depression.",education diagnosis sadness,0,nimh.nih.gov/depression
+D004,Exercise,"The 'Opposite Action' skill from DBT: Doing the opposite of what your depression urges you to do.",dbt action depression,0,dbtselfhelp.com/opposite-action
+D005,Video,"How sunlight and Vitamin D affect your mood: The science of Seasonal Affective Disorder.",seasonal weather sun,0,youtube.com/sad-science
+D006,Audio,"Loving-Kindness Meditation to build self-compassion and reduce self-criticism.",compassion self-love meditation,0,insighttimer.com/loving-kindness
+D007,Article,"Personal hygiene tips for when you are too depressed to shower.",self-care hygiene struggle,0,themighty.com/depression-hygiene
+S001,Tool,"Pomodoro Timer to break down overwhelming study loads and prevent burnout.",study productivity burnout,0,pomofocus.io
+S002,Article,"Dealing with Imposter Syndrome: Why you feel like a fraud in your major.",imposter-syndrome confidence school,0,hbr.org/imposter-syndrome
+S003,Video,"How to talk to your professor about requesting a deadline extension due to mental health.",communication university advocacy,0,youtube.com/ask-professor
+S004,Worksheet,"SMART Goals worksheet to turn vague academic stress into actionable steps.",goals planning stress,0,worksheet.com/smart-goals
+S005,Article,"The Perfectionism Trap: How trying to be perfect is hurting your grades.",perfectionism grades failure,0,psychologytoday.com/perfectionism
+S006,Audio,"Study Focus Binaural Beats: Soundscapes to help you concentrate without anxiety.",focus music study,0,youtube.com/study-beats
+S007,Service,"University Tutoring Center: Free academic support for struggling students.",campus help tutoring,0,campus.edu/tutoring
+Z001,Article,"Understanding the 'Sleep-Stress Cycle': How to fix your circadian rhythm before exams.",sleep rhythm exams,0,sleepfoundation.org/stress
+Z002,Audio,"Sleep Stories for Grown-ups: Narration to distract an overactive mind at night.",insomnia sleep distraction,0,calm.com/sleep-stories
+Z003,Tip,"The 10-3-2-1-0 Rule for better sleep hygiene and digital detox.",hygiene routine detox,0,fastcompany.com/sleep-rule
+Z004,Video,"Yoga for Sleep: Gentle stretching to relax the body before bed.",yoga body relax,0,youtube.com/yoga-sleep
+R001,Article,"Social Withdrawal vs. Solitude: When to reach out to friends and when to recharge.",introvert social isolation,0,psychology.com/withdrawal
+R002,Video,"How to set boundaries with toxic roommates or friends.",boundaries conflict roommates,0,youtube.com/boundaries
+R003,App,"Meetup: Find local groups sharing your hobbies to combat loneliness.",community loneliness friends,0,meetup.com
+R004,Article,"Managing Social Anxiety during class presentations and group work.",public-speaking social-anxiety,0,socialanxietyinstitute.org
+Sub001,Hotline,"SAMHSA National Helpline: Confidential treatment referrals for substance abuse.",addiction drugs alcohol,1,1-800-662-HELP
+Sub002,Article,"Harm Reduction strategies for college students regarding alcohol use.",alcohol safety college,0,collegedrinkingprevention.gov
+Sub003,App,"I Am Sober: Tracker for sobriety milestones and daily pledges.",sobriety tracker addiction,0,iamsober.com
+F001,Article,"Budgeting 101 for Students: Managing loans and daily expenses without panic.",money finance loans,0,nerdwallet.com/student-budget
+F002,Service,"University Career Center: Resume reviews and internship placement support.",career jobs future,0,campus.edu/career
+F003,Video,"How to handle rejection from job applications and keep moving forward.",rejection resilience career,0,youtube.com/career-rejection
+B001,Hotline,"NEDA Helpline: Support for eating disorders and body image concerns.",eating-disorder body-image,1,nationaleatingdisorders.org
+B002,Article,"Intuitive Eating: A guide to healing your relationship with food.",food health diet,0,intuitiveeating.org
+B003,Video,"Body Neutrality vs. Body Positivity: Accepting your body as it is.",body acceptance self-esteem,0,youtube.com/body-neutrality
+G001,Article,"Coping with grief while managing college coursework.",grief loss school,0,grief.com/students
+G002,Video,"Understanding PTSD triggers and how to manage them in public spaces.",ptsd trauma triggers,0,youtube.com/ptsd-triggers
+G003,Book,"The Body Keeps the Score: Understanding how trauma affects the body and mind.",trauma reading healing,0,bookstore.com/body-keeps-score
+W001,App,"Insight Timer: Thousands of free guided meditations for sleep and anxiety.",meditation free app,0,insighttimer.com
+W002,Video,"10-Minute Yoga for Stress Relief: Simple movement to clear your head.",yoga movement stress,0,youtube.com/yoga-stress
+W003,Audio,"Nature Sounds: Rain and Thunder for focus or relaxation.",sounds nature calm,0,spotify.com/rain-sounds
+W004,Article,"The benefits of 'Forest Bathing' (spending time in nature) for mental health.",nature outside wellness,0,time.com/forest-bathing
